@@ -1,7 +1,7 @@
 """Test the utility functions."""
 
 import unittest
-from src.template_package.utils import iter_together
+from template_package.utils import iter_together
 import pathlib
 
 HERE = pathlib.Path(__file__).parent.resolve()

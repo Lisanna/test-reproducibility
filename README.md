@@ -9,6 +9,13 @@ In main folder:
 pip install --editable .
 ```
 
+## Run test
+```shell
+pip install tox
+tox
+
+```
+
 ## Installation
 
 The code can be installed in development mode with:
