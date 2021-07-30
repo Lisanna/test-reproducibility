@@ -11,7 +11,5 @@ def iter_together(path_1: str, path_2: str) -> List[Tuple[str, str]]:
     with open(path_1) as file_1, open(path_2) as file_2:
         results = []
         for line_1, line_2 in zip(file_1, file_2):
-            results.append(
-                (line_1.strip(), line_2.strip())
-            )
+            results.append((line_1.strip(), line_2.strip()))
     return results
