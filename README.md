@@ -84,6 +84,11 @@ Utility Functions
     :members:
 ```
 
+Run from command line:
+```shell
+python -m template_package tests/test1.txt tests/test2.txts
+```
+
 ## Usage
 
 ```python
