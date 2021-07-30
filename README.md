@@ -30,6 +30,60 @@ $ pip install tox
 $ tox
 ```
 
+Init Sphinx documentation:
+```shell
+$ pip install sphinx
+$ mkdir docs
+$ cd docs
+$ sphinx-quickstart
+
+> Separate source and build directories (y/n) [n]: y
+> Project name: Template Package
+> Author name(s): Lisanna Paladin
+> Project release []: 0.0.1-dev
+> Project language [en]: 
+```
+
+Then change in `docs/conf.py`: 
+```python
+sys.path.insert(0, os.path.abspath('../../src'))
+...
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.coverage',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.todo',
+    'sphinx.ext.viewcode'
+]
+...
+html_theme = 'sphinx_rtd_theme'
+```
+
+And run:
+```shell
+$ pip install sphinx-rtd-theme
+$ cd docs
+$ make html
+```
+
+In `docs/source/index.rst`:
+```rst
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   utils
+```
+
+Add `docs/source/utils.rst` file:
+```rst
+Utility Functions
+=================
+
+.. automodule:: template_package.utils
+    :members:
+```
+
 ## Usage
 
 ```python
